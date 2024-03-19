@@ -27,6 +27,9 @@ const upload = multer({storage:storage});
 const productController = require("../controllers/productController");
 
 product_route.post ('/add-product',upload.array('images'),productController.addProduct);
+product_route.post('/get-products',productController.getProducts)
+product_route.post('/delete-products',productController.deleteProducts);
+product_route.post('/update-product',upload.array('images'),productController.updateProducts);
 
 
 module.exports = product_route;

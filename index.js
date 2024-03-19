@@ -17,6 +17,9 @@ app.use('/api',userRoute);
 const productRoute = require('./routes/productRoute');
 app.use('/api',productRoute);
 
+const orderRoute = require('./routes/orderRoute');
+app.use('/api',orderRoute);
+
 const PORT = 8088;
 
 app.listen(PORT,function(){
